@@ -1,0 +1,14 @@
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+ErrorDocument 404 /404.html
+
+RewriteRule ^salut$ index.html [L]
+RewriteRule ^([a-z0-9-/]+)$ /index.html
