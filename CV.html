@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face 
+        {
+            font-family: biorhymeBold;
+            src: url("/biorhyme/BioRhyme-Bold.ttf");
+            font-weight: bold;
+        }
+
+        @font-face 
+        {
+            font-family: biorhymeExtra;
+            src: url("/biorhyme/BioRhyme-ExtraBold.ttf");
+            font-weight: bold;
+        }
+        @font-face 
+        {
+            font-family: biorhymeLight;
+            src: url("/biorhyme/BioRhyme-Light.ttf");
+        }
+
+        @font-face 
+        {
+            font-family: biorhymeExtraLight;
+            src: url("/biorhyme/BioRhyme-ExtraLight.ttf");
+        }
+
+        @font-face 
+        {
+            font-family: biorhyme;
+            src: url("/biorhyme/BioRhyme-Regular.ttf");
+        }
+
+        @page  
+        { 
+            size: auto;   /* auto is the initial value */ 
+
+            /* this affects the margin in the printer settings */ 
+            margin: 0;  
+        } 
+
+        @media all
+        {
+            p
+            {
+                text-align: justify;
+                text-indent: 1cm;
+                margin: 0.3cm;
+                font-size: 0.9em;
+            }
+
+            .separator1, .separator2
+            {
+                border: .1cm rgb(38, 38, 38) solid;
+                width: 9cm;
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px 0 0 30px;
+                color: white;
+                background-color: rgb(38, 38, 38);
+                font-size: 1em;
+                font-family: biorhyme;
+                margin-top: 0.7cm;
+                padding-left: 1cm;
+            }
+
+            .separator2
+            {
+                width: 3cm;
+                margin-left: .8cm;
+                padding-left: 1cm;
+                padding-right: .3cm;
+            }
+
+            html, body
+            {
+                height: 100%;
+                width: 100%;
+                background-color: gray;;
+                font-family:biorhymeExtra, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                /* margin:0; */
+            }
+            .page
+            {
+                display: flex;
+                flex-direction: row;
+                height: 29.7cm;
+                width: 21cm;
+                background-color: white;
+            }
+            .leftpart, .rightpart
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .rightpart
+            {
+                align-items: center;
+            }
+
+            .shape
+            {
+                border: 0.3cm black solid;
+            }
+            .shape1
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 7cm;
+                height: 7cm;
+                background: yellow;
+            }
+
+            .shape1 img
+            {
+                height: 4.5cm;
+                box-shadow: 0 0 10px rgb(192, 192, 0);
+                border: 0.15cm black solid;
+            }
+
+            .shape2
+            {
+                display: flex;
+                flex-direction: column;
+                width: 13.41cm;
+                height: 5cm;
+                border-left: none;
+                border-right:none;
+            }
+
+            .shape3
+            {
+                display: flex;
+                flex-direction: row;
+                width: 7cm; 
+                height: 22.7cm;
+                border-top: none;
+                border-bottom: none;
+                justify-content: center;
+            }
+
+            .leftpart1
+            {
+                display: block;
+                width: 6.9cm;
+                border-left: none;
+                border-top: none;
+                border-bottom: none;
+                border-right: none;
+            }
+
+            .rightpart1
+            {
+                margin-right: none;
+                margin-left: none;
+                border-top: none;
+                border-right: none;
+                border-bottom: none;
+            }
+
+            .c1
+            {
+                background: red;
+            }
+
+            .c2
+            {
+                background: rgb(43, 43, 255);
+            }
+
+            .c4
+            {
+                background: yellow;
+                border-bottom: none;
+            }
+
+            .toppart, .bottompart
+            {
+                display: flex;
+                flex-direction: row;
+                width: 13.41cm;
+                height: 2.5cm;
+                border-left: none;
+                border-right: none;
+            }
+
+            .toppart
+            {
+                display: flex;
+                flex-direction: column;
+                border-top: none;
+                border-bottom: 0.15cm;
+                height: 6cm;
+                background: rgb(43, 43, 255);
+                justify-content: center;
+            }
+
+            .toppart h1, .toppart h2
+            {
+                color:white;
+                text-align: center;
+                margin: 0;
+                text-align: left;
+                margin-left: 0.3cm;
+            }
+
+            .g1
+            {
+                /* text-align: left; */
+            }
+
+            .bottompart
+            {
+                border-bottom: none;
+            }
+
+            .leftpart2, .rightpart2
+            {
+                display: flex;
+                flex-direction: column;
+                width: 13.41cm;
+                border-top: none;
+                border-bottom: none;;
+            }
+
+            .leftpart2
+            {
+                border-left: none;
+                border-right: 2.5cm;
+                background: red;
+            }
+
+            .rightpart2
+            {
+                border-right: none;
+            }
+
+            .c1, .c2, .c3, .c4
+            {
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                /* border-bottom: none; */
+                width: .4cm;
+                height: 5.38cm;
+                /* background: red; */
+            }
+
+            .data 
+            {
+                margin: .2cm .2cm 0 .2cm;
+            }
+
+            .data p
+            {
+                margin:0;
+            }
+
+            .nimp1
+            {
+                color: rgb(60, 125, 255);
+            }
+
+            .imp1
+            {
+                font-size: 1em;
+                color: rgb(37, 66, 255);
+            }
+
+            .list 
+            {
+                width: 100%;
+            }
+
+            .list ul
+            {
+                padding-left: -1.5cm;
+                list-style-type: none;
+            }
+
+            .list ul li::before
+            {
+                font-size: 1.1em;
+                content: "⇢ ";
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+        <div class="leftpart">
+            <!-- Carre principal -->
+            <div class="shape shape1">
+                <img src="/img/PEBKAC.jpg" alt="Photo ou pas">
+            </div>
+
+            <div class="shape shape3">
+                <div class="shape leftpart1">
+                    <div class="separator2">
+                        Coordonnées
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Mobile :</p>
+                        <p class="nimp1">0102030405</p>
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Email :</p>
+                        <p class="nimp1">truc@much.com</p>
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Adresse :</p>
+                        <p class="nimp1">0 rue du Lidl, Pari</p>
+                    </div>
+
+                    <div class="separator2">
+                        Langues
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Français</p>
+                        <p class="nimp1">Langue maternelle</p>
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Anglais</p>
+                        <p class="nimp1">...</p>
+                    </div>
+                    <div class="data">
+                        <p class="imp1">Allemand</p>
+                        <p class="nimp1">Notions</p>
+                    </div>
+                </div>
+
+                <!-- SERT DE DÉCO -->
+                <div class="shape rightpart1">
+                    <div class="shape c1"></div>
+                    <div class="shape c2"></div>
+                    <div class="shape c3"></div>
+                    <div class="shape c4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightpart">
+            <div class="shape shape2">
+                <div class="shape toppart">
+                    <div class="g1">
+                        <h1>Arthur SCHUMACHER</h1>
+                        <h2>Étudiant en licence de maths et d'info</h2>
+                    </div>  
+                </div>
+                <div class="shape bottompart">
+                    <div class="shape leftpart2"></div>
+                    <div class="shape rightpart2"></div>
+                </div>
+            </div>
+
+            <div class="separator1">
+                À Propos de moi
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit aliquid eum illo? Atque, iure repellat rem cupiditate totam nesciunt enim nulla sit voluptas officia aspernatur laborum optio repellendus recusandae minima.</p>
+            
+            <div class="separator1">
+                Compétences
+            </div>
+            <div class="list">
+                <ul>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>HTML / CSS</li>
+                </ul>
+            </div>
+
+            <div class="separator1">
+                Formation
+            </div>
+            <div class="list">
+                <ul>
+                    <div class="elem">
+                        <span>2020</span><li>C++</li>
+                    </div>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>
